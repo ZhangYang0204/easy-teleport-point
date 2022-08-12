@@ -1,0 +1,9 @@
+completer:
+
+  #当输入了/easyTeleportPoint后将提示补全以下内容
+  easyTeleportPoint:
+    - "help"
+    - "reloadPlugin"
+    - "correctYaml"
+    - "openGui"
+    - "openMui"

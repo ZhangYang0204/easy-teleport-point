@@ -1,0 +1,9 @@
+name: EasyTeleportPoint
+version: 1.0.0
+main: pers.zhangyang.easyteleportpoint.EasyTeleportPoint
+api-version: 1.13
+commands:
+  EasyTeleportPoint:
+    aliases: etp
+softdepend:
+  - Vault

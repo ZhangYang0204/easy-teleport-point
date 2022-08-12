@@ -1,0 +1,10 @@
+
+daoPackage: []
+listenerPackage:
+  - "pers/zhangyang/easyteleportpoint/listener"
+executorPackage:
+  - "pers/zhangyang/easyteleportpoint/executor"
+yamlPackage:
+  - "pers/zhangyang/easyteleportpoint/yaml"
+guiButtonHandlerPackage:
+  - "pers/zhangyang/easyteleportpoint/listener"
