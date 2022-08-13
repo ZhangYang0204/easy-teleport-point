@@ -36,22 +36,8 @@ public class TeleportPointYaml extends YamlBase {
         }
         for (String s:configurationSection.getKeys(false)){
 
-            String worldName=getString("teleportPoint."+s+".location.worldName");
-            Double x=getDouble("teleportPoint."+s+".location.x");
-            Double y=getDouble("teleportPoint."+s+".location.y");
-            Double z=getDouble("teleportPoint."+s+".location.z");
-            Double yawD=getDouble("teleportPoint."+s+".location.yaw");
-            Double pitchD=getDouble("teleportPoint."+s+".location.pitch");
-            if (worldName==null||x==null||y==null||z==null||yawD==null||pitchD==null){
-                continue;
-            }
-            World world= Bukkit.getWorld(worldName);
-            if (world==null){
-                continue;
-            }
-            float yaw=yawD.floatValue();
-            float pitch=pitchD.floatValue();
-            Location location=new Location(world,x,y,z,yaw,pitch);
+
+            Location location=getLocation("teleportPoint."+s+".location");
             ItemStack button=getButton("teleportPoint."+s+".button");
             if (button==null){
                 continue;

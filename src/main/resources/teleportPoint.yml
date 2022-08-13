@@ -9,8 +9,8 @@ teleportPoint:
 
     
     location:
-      #这个是传送点的世界的名字，如果填错，或者没填，这个附魔室传送点将不会被加载
-      #This is the name of the world where the teleportation point is located. If it is filled in incorrectly, or if it is not filled in, the enchanted room teleportation point will not be loaded
+      #这个是传送点的世界的名字
+      #This is the name of the world where the teleportation point is located.
       worldName: "world"
 
       #坐标x，不管是不是整数，都要加有小数位数，例如0.0，如果填错，或者没填，这个附魔室传送点将不会被加载
