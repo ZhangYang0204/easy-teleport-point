@@ -1,6 +1,6 @@
 completer:
 
-  #当输入了/easyTeleportPoint后将提示补全以下内容
+  #When you type /easyTeleportPoint you will be prompted to complete the following
   easyTeleportPoint:
     - "help"
     - "reloadPlugin"

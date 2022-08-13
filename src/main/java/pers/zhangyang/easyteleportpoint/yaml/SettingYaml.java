@@ -20,12 +20,6 @@ public class SettingYaml extends YamlBase {
         return display;
     }
 
-    public double backCost() {
-        double display = getDoubleDefault("setting.backBackPointCost");
-        if (display<0){
-            display=0;
-        }
-        return display;
-    }
+
 
 }

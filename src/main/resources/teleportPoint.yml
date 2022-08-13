@@ -1,39 +1,51 @@
 teleportPoint:
 
   #这个名字随便起
+  # This name can be called anything
   附魔室:
     #传送需要的花费，Vault金币，必须非负数，否则将置空，置空意味着不开启扣钱操作
+    #The cost of the teleport, Vault Gold, must be a non-negative number, otherwise it will be set to null, which means no money will be deducted.
     cost: 10
 
     
     location:
       #这个是传送点的世界的名字，如果填错，或者没填，这个附魔室传送点将不会被加载
+      #This is the name of the world where the teleportation point is located. If it is filled in incorrectly, or if it is not filled in, the enchanted room teleportation point will not be loaded
       worldName: "world"
 
       #坐标x，不管是不是整数，都要加有小数位数，例如0.0，如果填错，或者没填，这个附魔室传送点将不会被加载
+      # Coordinate x, whether it is an integer or not, should be added with decimal places, such as 0.0, if filled in wrongly, or not, this enchanted room teleportation point will not be loaded
       x: 0.0
 
       #坐标y，不管是不是整数，都要加有小数位数，例如0.0，如果填错，或者没填，这个附魔室传送点将不会被加载
+      # Coordinate y, whether it is an integer or not, should be added with decimal places, such as 0.0, if filled in wrongly, or not, this enchanted room teleportation point will not be loaded
       y: 80.0
 
       #坐标z，不管是不是整数，都要加有小数位数，例如0.0，如果填错，或者没填，这个附魔室传送点将不会被加载
+      # Coordinate z, whether it is an integer or not, should be added with decimal places, such as 0.0, if filled in wrongly, or not, this enchanted room teleportation point will not be loaded
       z: 0.0
 
       #yaw，视角方向参数，不管是不是整数，都要加有小数位数，例如0.0，如果填错，或者没填，这个附魔室传送点将不会被加载
+      #yaw, the view direction parameter, regardless of whether it is an integer, should be added with a decimal number, such as 0.0, if you fill in the wrong, or did not fill in, this enchanted room transfer point will not be loaded
       yaw: 0.0
 
       #pitch，视角方向参数，不管是不是整数，都要加有小数位数，例如0.0，如果填错，或者没填，这个附魔室传送点将不会被加载
+      #pitch, the perspective direction parameter, regardless of whether it is an integer, should be added with a decimal number, such as 0.0, if you fill in the wrong, or did not fill in, this enchanted room transfer point will not be loaded
       pitch: 0.0
     button:
 
       #表示按钮的材料,想知道材料名字,请前往https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html查看
       #如果是AIR代表不显示相关按钮并且无法被点击，此值为空或填错则该传送点不会被加载
+      # indicates the material of the button, to know the material name, please go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+      #If AIR means the button is not displayed and cannot be clicked, if this value is empty or incorrectly filled, the transfer point will not be loaded.
       materialName: "ENCHANTING_TABLE"
 
       #表示按钮的名称
+      # indicates the name of the button
       displayName: "&b&l&n附魔室"
 
       #表示按钮的描述，lore中可以用的变量，除了{()}括起来的，都可以用在displayName中
+      # indicates the description of the button, the variables that can be used in lore, except those enclosed in {()}, can be used in displayName
       lore:
         - "&a&l世界：&f{world}"
         - "&b&l坐标x：&f{x}"
@@ -42,12 +54,15 @@ teleportPoint:
         - "&e&l点我前往附魔室"
 
       #表示数量
+        # indicates quantity
       amount: 1
 
       #表示标志，想知道可以隐藏哪些，请前往https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/ItemFlag.html
+      # indicates flags, to know which ones you can hide, go to https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/ItemFlag.html
       itemFlag:
         - "HIDE_DESTROYS"
 
       #用哪个模型数据 1.12及以前的版本不支持这个
+      # Which model data to use 1.12 and previous versions do not support this
       customModelData: [ ]
 

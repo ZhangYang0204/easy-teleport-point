@@ -10,6 +10,7 @@ import org.jetbrains.annotations.Nullable;
 import pers.zhangyang.easylibrary.base.BackAble;
 import pers.zhangyang.easylibrary.base.GuiPage;
 import pers.zhangyang.easylibrary.base.MultipleGuiPageBase;
+import pers.zhangyang.easylibrary.util.CommandUtil;
 import pers.zhangyang.easylibrary.util.PageUtil;
 import pers.zhangyang.easylibrary.util.ReplaceUtil;
 import pers.zhangyang.easylibrary.util.TimeUtil;
@@ -33,23 +34,7 @@ public class AllTeleportPointPage extends MultipleGuiPageBase implements BackAbl
         if (cmdList==null){
             return;
         }
-        for (String s:cmdList){
-            String[] args=s.split(":");
-            if (args.length!=2){
-                continue;
-            }
-            String way=args[0];
-            String command=args[1];
-            if ("console".equalsIgnoreCase(way)){
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(),command);
-            }else if ("player".equalsIgnoreCase(way)){
-                Bukkit.dispatchCommand(viewer,command);
-            }else if ("operator".equalsIgnoreCase(way)){
-                viewer.setOp(true);
-                Bukkit.dispatchCommand(viewer,command);
-                viewer.setOp(false);
-            }
-        }
+        CommandUtil.dispatchCommandList(viewer,cmdList);
     }
     @Override
     public void send() {
@@ -94,14 +79,14 @@ public class AllTeleportPointPage extends MultipleGuiPageBase implements BackAbl
 
 
 
-        ItemStack returnPage= GuiYaml.INSTANCE.getButton("gui.button.allTeleportPointPage.back");
+        ItemStack returnPage= GuiYaml.INSTANCE.getButtonDefault("gui.button.allTeleportPointPage.back");
         this.inventory.setItem(49,returnPage);
 
 
 
 
         if (pageIndex > 0) {
-            ItemStack previous = GuiYaml.INSTANCE.getButton("gui.button.allTeleportPointPage.previousPage");
+            ItemStack previous = GuiYaml.INSTANCE.getButtonDefault("gui.button.allTeleportPointPage.previousPage");
             inventory.setItem(45, previous);
         }
         int maxIndex = PageUtil.computeMaxPageIndex(teleportPointList.size(), 45);
@@ -109,7 +94,7 @@ public class AllTeleportPointPage extends MultipleGuiPageBase implements BackAbl
             this.pageIndex = maxIndex;
         }
         if (pageIndex < maxIndex) {
-            ItemStack next = GuiYaml.INSTANCE.getButton("gui.button.allTeleportPointPage.nextPage");
+            ItemStack next = GuiYaml.INSTANCE.getButtonDefault("gui.button.allTeleportPointPage.nextPage");
             inventory.setItem(53, next);
         }
 
