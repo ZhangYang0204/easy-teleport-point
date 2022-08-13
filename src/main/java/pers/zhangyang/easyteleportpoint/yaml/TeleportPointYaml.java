@@ -38,6 +38,9 @@ public class TeleportPointYaml extends YamlBase {
 
 
             Location location=getLocation("teleportPoint."+s+".location");
+            if (location==null){
+                continue;
+            }
             ItemStack button=getButton("teleportPoint."+s+".button");
             if (button==null){
                 continue;
@@ -46,7 +49,6 @@ public class TeleportPointYaml extends YamlBase {
             if (cost!=null&&cost<0){
                 cost=null;
             }
-
             TeleportPoint teleportPoint=new TeleportPoint(location,button,cost);
             teleportPointList.add(teleportPoint);
 
