@@ -43,9 +43,9 @@ message:
     teleportTeleportPoint:
       - "&c&l前往了传送点。"
 
-    notEnoughVaultWhenTeleportTeleportPoint:
+    notEnoughVault:
       - "&c&l钱不够，不能传送。"
-    tooFastWhenTeleportTeleportPoint:
+    tooFast:
       - "&c&l传送速度太快了。"
 
 

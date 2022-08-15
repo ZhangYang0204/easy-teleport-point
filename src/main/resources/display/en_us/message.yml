@@ -43,9 +43,9 @@ message:
     teleportTeleportPoint:
       - "&c&l Traveled to teleport point."
 
-    notEnoughVaultWhenTeleportTeleportPoint:
+    notEnoughVault:
       - "&c&l didn't have enough money to teleport."
-    tooFastWhenTeleportTeleportPoint:
+    tooFast:
       - "&c&l Teleporting too fast."
 
 

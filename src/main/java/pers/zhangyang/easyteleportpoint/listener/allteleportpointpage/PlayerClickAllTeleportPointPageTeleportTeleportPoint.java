@@ -47,7 +47,7 @@ public class PlayerClickAllTeleportPointPageTeleportTeleportPoint implements Lis
             if (gamer.getLastTeleportPointTime() != null && System.currentTimeMillis() - gamer.getLastTeleportPointTime()
                     < perm * 1000L) {
 
-                List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.tooFastWhenTeleportTeleportPoint");
+                List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.tooFast");
                 MessageUtil.sendMessageTo(player, list);
                 return;
             }
@@ -60,7 +60,7 @@ public class PlayerClickAllTeleportPointPageTeleportTeleportPoint implements Lis
                 return;
             }
             if (Vault.hook().getBalance(onlineOwner)< teleportPoint.getCost()){
-                List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.notEnoughVaultWhenTeleportTeleportPoint");
+                List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.notEnoughVault");
                 MessageUtil.sendMessageTo(player, list);
                 return;
             }
