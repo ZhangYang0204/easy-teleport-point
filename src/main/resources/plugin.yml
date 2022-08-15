@@ -1,5 +1,5 @@
 name: EasyTeleportPoint
-version: 1.0.0
+version: 1.0.1
 main: pers.zhangyang.easyteleportpoint.EasyTeleportPoint
 api-version: 1.13
 commands:
