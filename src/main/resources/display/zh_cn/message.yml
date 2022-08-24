@@ -1,4 +1,5 @@
 message:
+  #下面支持Papi变量
   chat:
     failureGetLatestVersion:
       - "&c&l获得EasyTeleportPoint最新版本失败。"

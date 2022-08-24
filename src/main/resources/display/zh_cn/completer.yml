@@ -7,3 +7,5 @@ completer:
     - "correctYaml"
     - "openGui"
     - "openMui"
+  easyTeleportPointOpenMui:
+    - "<玩家名字>"

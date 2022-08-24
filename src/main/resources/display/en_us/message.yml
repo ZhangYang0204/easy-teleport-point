@@ -1,4 +1,5 @@
 message:
+  # Below support Papi variables
   chat:
     failureGetLatestVersion:
       - "&c&l Failed to get the latest version of EasyTeleportPoint."
