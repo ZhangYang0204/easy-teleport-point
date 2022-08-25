@@ -73,7 +73,6 @@ public class PlayerClickAllTeleportPointPageTeleportTeleportPoint implements Lis
         Gamer gamer = GamerManager.INSTANCE.getGamer(onlineOwner);
             gamer.setLastTeleportPointTime(System.currentTimeMillis());
 
-            allTeleportPointPage.refresh();
 
             List<String> list = MessageYaml.INSTANCE.getStringList("message.chat.teleportTeleportPoint");
             MessageUtil.sendMessageTo(player, list);
