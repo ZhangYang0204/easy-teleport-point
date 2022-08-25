@@ -19,7 +19,7 @@ import java.util.List;
 
 @EventListener
 public class PlayerClickAllTeleportPointPageTeleportTeleportPoint implements Listener {
-    @GuiSerialButtonHandler(guiPage = AllTeleportPointPage.class,from = 0,to = 44)
+    @GuiSerialButtonHandler(guiPage = AllTeleportPointPage.class,from = 0,to = 44,refreshGui = false,closeGui = true)
     public void on(InventoryClickEvent event){
         AllTeleportPointPage allTeleportPointPage= (AllTeleportPointPage) event.getInventory().getHolder();
 
